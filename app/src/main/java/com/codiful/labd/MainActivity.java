@@ -3,6 +3,7 @@ package com.codiful.labd;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -15,40 +16,47 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ListView listOfCars;
-    private static CarAdapter carAdapter;
-    private EditText addNewCar;
-    private Button addButton;
-    private ArrayList<Car> c ;
-    private void init(){
+    private Button save;
+    private Button activity;
+    private EditText input;
+    private MySharedPreference sh;
 
+    private void initView() {
+        save = (Button) findViewById(R.id.save);
+        activity = (Button) findViewById(R.id.btn2);
+        input = (EditText) findViewById(R.id.editText);
+
+        sh = new MySharedPreference(getApplicationContext());
+    }
+
+    private void SaveData() {
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                sh.save(input.getText().toString());
+            }
+        });
+    }
+
+    private void OpenActivity() {
+        activity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this, SecondActivity.class);
+                i.putExtra("no_value","Oops ! no data saved , this message is from intent");
+                startActivity(i);
+            }
+        });
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        addNewCar =  (EditText) findViewById(R.id.editText);
-        addButton = (Button) findViewById(R.id.btn);
+        initView();
 
-        listOfCars = (ListView) findViewById(R.id.lv_list_cars);
-        carAdapter = new CarAdapter(MainActivity.this);
-        carAdapter.addCar("Dacia",R.drawable.lab_car_icon);
-        carAdapter.addCar("Dacia",R.drawable.lab_car_icon);
-
-        carAdapter.addCar("Dacia",R.drawable.lab_car_icon);
-
-        carAdapter.addCar("Dacia",R.drawable.lab_car_icon);
-        carAdapter.notifyDataSetChanged();
-        listOfCars.setAdapter(carAdapter);
-
-        addButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                carAdapter.addCar(addNewCar.getText().toString(),R.drawable.lab_car_icon);
-            }
-        });
-
+        SaveData();
+        OpenActivity();
 
     }
 

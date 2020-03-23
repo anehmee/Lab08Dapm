@@ -3,24 +3,38 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="#B1AAE3">
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="enter some text here"
         android:id="@+id/editText"/>
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Add"
-        android:id="@+id/btn"></Button>
+        android:orientation="horizontal"
+        android:padding="10dp">
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:background="@mipmap/ic_launcher"
+            android:id="@+id/save"/>
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="go to second activity"
+            android:id="@+id/btn2"/>
 
-    <ListView
-        android:id="@+id/lv_list_cars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ></ListView>
+    </LinearLayout>
 
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="After saving , on subsequent launch go to second activity without saving.You will still see saved data."
+    android:textSize="15dp"/>
 </LinearLayout>
