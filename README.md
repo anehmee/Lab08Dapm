@@ -1,6 +1,7 @@
 Lab 08 DAPM
 
-Simple android app to display movies data from firebase , data are displayed in recycleViews
+Simple android app to display movies data from firebase , data are displayed in recycleViews , application is based on this tutorial https://www.youtube.com/watch?v=K2FSLZzYnnQ
+
 
 ## Images
 ![image](https://user-images.githubusercontent.com/40066763/78583435-8356d480-783f-11ea-8f6e-8d9e4af1f16d.png)
