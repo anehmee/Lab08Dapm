@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "422435116631",
+    "firebase_url": "https://labdapm.firebaseio.com",
+    "project_id": "labdapm",
+    "storage_bucket": "labdapm.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:422435116631:android:7d3034d03bcae724cb3512",
+        "android_client_info": {
+          "package_name": "com.codiful.labd"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "422435116631-b5s1v0ci36ctjp88rdouomn8rr7s6848.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codiful.labd",
+            "certificate_hash": "c9911a01831bc7245ca76a1c814c0c2a7e96f384"
+          }
+        },
+        {
+          "client_id": "422435116631-kuma6oebflehj8rk4acm9tudokn30k68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfX9hMBO7OdK8ok-iom5wIyWRbNw7kxVI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "422435116631-kuma6oebflehj8rk4acm9tudokn30k68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
