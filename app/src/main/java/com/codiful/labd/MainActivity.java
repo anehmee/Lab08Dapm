@@ -90,10 +90,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private  void getData()
-    {
-
-    }
+  
 
     class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.MyViewHolder> {
         private Context context;
